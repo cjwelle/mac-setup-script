@@ -310,21 +310,19 @@ brew cask install java
 
 prompt "Install packages"
 brew info ${brews[@]}
-install 'brew install' ${brews[@]}
+brew install ${brews[@]}
 
 prompt "Install software"
 brew tap caskroom/versions
 brew cask info ${casks[@]}
-install 'brew cask install' ${casks[@]}
-
-prompt "Installing secondary packages"
-install 'pip install --upgrade' ${pips[@]}
-install 'gem install' ${gems[@]}
-install 'npm install --global' ${npms[@]}
-install 'code --install-extension' ${vscode[@]}
+brew cask install ${casks[@]}
+pip install --upgrade ${pips[@]}
+gem install ${gems[@]}
+npm install --global ${npms[@]}
+code --install-extension ${vscode[@]}
 brew tap caskroom/fonts
-install 'brew cask install' ${fonts[@]}
-install 'apm install' ${apm[@]}
+brew cask install ${fonts[@]}
+apm install ${apm[@]}
 
 prompt "Upgrade bash"
 brew install bash
