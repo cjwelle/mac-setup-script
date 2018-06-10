@@ -5,13 +5,13 @@ brews=(
   archey
   awscli
   aws-shell
-  chainsawbaby/formula/bash-snippets
+  bash-snippets
   cheat
   coreutils
   dfc
   findutils
   fish
-  fontconfig --universal
+  fontconfig
   fpp
   fzf
   git
@@ -19,15 +19,14 @@ brews=(
   git-extras
   git-fresh
   git-lfs
-  gnuplot --with-qt
-  gnu-sed --with-default-names
+  gnuplot
   go
   haskell-stack
   hh
   htop
   httpie
   iftop
-  imagemagick --with-webp
+  imagemagick
   jq
   lighttpd
   lnav
@@ -48,16 +47,14 @@ brews=(
   python
   python3
   osquery
-  scala
-  sbt
   shellcheck
   stormssh
   thefuck
   tmux
   tree
   trash
-  vim --with-override-system-vi
-  wget --with-iri
+  vim
+  wget
 )
 
 casks=(
@@ -178,7 +175,7 @@ npms=(
   nuclide-installer
 )
 
-gpg_key='3E219504'
+gpg_key='966831710CA34AAA'
 git_configs=(
   "branch.autoSetupRebase always"
   "color.ui auto"
@@ -191,8 +188,8 @@ git_configs=(
   "rebase.autostash true"
   "rerere.autoUpdate true"
   "rerere.enabled true"
-  "user.name pathikrit"
-  "user.email pathikritbhowmick@msn.com"
+  "user.name cjwelle"
+  "user.email cjwelle@gmail.com"
   "user.signingkey ${gpg_key}"
 )
 
@@ -213,6 +210,13 @@ fonts=(
 set +e
 set -x
 
+function password {
+  prompt "Please enter in your password."
+  echo -n Password:
+  read -s password
+  echo
+}
+
 function prompt {
   read -p "Hit Enter to $1 ..."
 }
@@ -229,7 +233,6 @@ else
   brew upgrade
 fi
 brew doctor
-brew tap homebrew/dupes
 
 function install {
   cmd=$1
