@@ -149,6 +149,7 @@ casks=(
   xbench
   xquartz
   xz
+  yarn
   zoomus
 )
 
