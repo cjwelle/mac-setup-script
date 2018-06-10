@@ -3,8 +3,9 @@
 brews=(
   ansible
   archey
-  awscli
   aws-shell
+  awscli
+  bash-completion
   bash-snippets
   cheat
   coreutils
@@ -15,7 +16,6 @@ brews=(
   fpp
   fzf
   git
-  bash-completion
   git-extras
   git-fresh
   git-lfs
@@ -28,43 +28,48 @@ brews=(
   iftop
   imagemagick
   jq
+  kubernetes-cli
   lighttpd
   lnav
-  kubernetes-cli
   mackup
   macvim
   mas
   micro
   moreutils
+  mosh
   mtr
   ncdu
   nmap
   node
+  osquery
+  pgcli
   poppler
   postgresql
-  pgcli
   pv
   python
   python3
-  osquery
   shellcheck
   stormssh
   thefuck
   tmux
-  tree
   trash
+  tree
+  vagrant-completion
   vim
   wget
+  xz
 )
 
 casks=(
-  adobe-reader
   adobe-air
+  adobe-reader
   aerial
   angry-ip-scanner
   atlauncher
   atom
   authy
+  basecamp
+  betterzipql
   cakebrew
   cleanmymac
   commander-one
@@ -75,39 +80,39 @@ casks=(
   filezilla
   firefox
   geekbench
-  google-chrome
-  google-drive
+  gimp
   github-desktop
-  hosts
+  google-backup-and-sync
+  google-chrome
   hobo
   hostbuddy
+  hosts
   hyper
   iina
   istat-menus
   istat-server
   iterm2
-  launchrocket
-  licecap
   java
   jetbrains-toolbox
   kap-beta
   keka
-  betterzipql
-  qlcolorcode
-  qlmarkdown
-  qlstephen
-  quicklook-json
-  quicklook-csv
+  launchrocket
+  licecap
   macdown
-  mindjet-mindmanager
   microsoft-office
+  mindjet-mindmanager
   minikube
   monity-helper
-  muzzle
   mosh
+  muzzle
   osxfuse
   pandora
   private-eye
+  qlcolorcode
+  qlmarkdown
+  qlstephen
+  quicklook-csv
+  quicklook-json
   resilio-sync
   royal-tsx
   satellite-eyes
@@ -116,32 +121,33 @@ casks=(
   serial
   sidekick
   skype
-  snagit
   slack
   sling
+  snagit
   spotify
   sqlite
   steam
   superduper
   sync
   teleport
-  transmit
   transmission
   transmission-remote-gui
+  transmit
   unetbootin
   vagrant
   vagrant-manager
   veracrypt
-  viscosity
-  visual-studio-code
-  volumemixer
   virtualbox
   virtualbox-extension-pack
+  viscosity
+  visual-studio-code
   vlc
+  vmware-fusion
+  volumemixer
   webstorm
+  xbench
   xquartz
   xz
-  xbench
   zoomus
 )
 
@@ -149,9 +155,9 @@ pips=(
   pip
   ansible
   bcrypt
-  powerline-shells
   glances
   ohmu
+  powerline-shells
   pythonpy
   PyYAML
   setuptools
@@ -207,6 +213,7 @@ apm=(
   project-plus
   project-viewer
   ramda-syntax
+  sort-lines
   sync-settings@
   synced-sidebar
   tree-view-git-branch
