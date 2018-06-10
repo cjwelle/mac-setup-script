@@ -85,7 +85,6 @@ casks=(
   google-chrome
   hobo
   hostbuddy
-  hosts
   hyper
   iina
   istat-menus
@@ -262,7 +261,7 @@ function password {
 }
 
 function prompt {
-  read -p "Hit Enter to $1 ..."
+  read -p "Setting up $1 ..."
 }
 
 if test ! $(which brew); then
