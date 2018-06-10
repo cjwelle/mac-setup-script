@@ -175,6 +175,44 @@ npms=(
   nuclide-installer
 )
 
+apm=(
+  ansible-galaxy
+  ansible-snippets
+  ansible-vault@
+  asciidoc-assistant
+  asciidoc-image-helper
+  asciidoc-preview
+  atom-beautify
+  atom-cform
+  atom-cform-yaml
+  atom-json-color
+  atom-material-syntax-dark
+  atom-material-ui
+  atom-yamljson
+  autocomplete-ansible
+  autocomplete-asciidoc
+  autocomplete-modules
+  autocomplete-python
+  autocomplete-xml
+  git-plus
+  git-projects
+  git-status
+  git-time-machine
+  language-ansible
+  language-asciidoc
+  language-json-comments
+  language-yaml-cloudformation
+  merge-conflicts
+  pretty-json
+  project-plus
+  project-viewer
+  ramda-syntax
+  sync-settings@
+  synced-sidebar
+  tree-view-git-branch
+  tree-view-git-status
+)
+
 gpg_key='966831710CA34AAA'
 git_configs=(
   "branch.autoSetupRebase always"
@@ -279,6 +317,7 @@ install 'npm install --global' ${npms[@]}
 install 'code --install-extension' ${vscode[@]}
 brew tap caskroom/fonts
 install 'brew cask install' ${fonts[@]}
+install 'apm install' ${apm[@]}
 
 prompt "Upgrade bash"
 brew install bash
