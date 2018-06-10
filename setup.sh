@@ -78,7 +78,7 @@ docker
 dropbox
 epic
 filezilla
-firfox
+firefox
 geekbench
 gimp
 github
