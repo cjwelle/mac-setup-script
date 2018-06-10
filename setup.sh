@@ -80,7 +80,7 @@ casks=(
   firefox
   geekbench
   gimp
-  github-desktop
+  github
   google-backup-and-sync
   google-chrome
   hobo
@@ -123,6 +123,7 @@ casks=(
   slack
   sling
   snagit
+  sourcetree
   spotify
   sqlite
   steam
@@ -212,7 +213,7 @@ apm=(
   project-viewer
   ramda-syntax
   sort-lines
-  sync-settings@
+  sync-settings
   synced-sidebar
   tree-view-git-branch
   tree-view-git-status
