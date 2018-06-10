@@ -61,8 +61,8 @@ brews=(
 )
 
 casks=(
+  adobe-acrobat-reader
   adobe-air
-  adobe-reader
   aerial
   angry-ip-scanner
   atlauncher
@@ -157,7 +157,7 @@ pips=(
   bcrypt
   glances
   ohmu
-  powerline-shells
+  powerline-shell
   pythonpy
   PyYAML
   setuptools
@@ -178,7 +178,6 @@ npms=(
   gitjk
   kill-tabs
   n
-  nuclide-installer
 )
 
 apm=(
@@ -279,20 +278,20 @@ else
 fi
 brew doctor
 
-function install {
-  cmd=$1
-  shift
-  for pkg in $@;
-  do
-    exec="$cmd $pkg"
-    prompt "Execute: $exec"
-    if ${exec} ; then
-      echo "Installed $pkg"
-    else
-      echo "Failed to execute: $exec"
-    fi
-  done
-}
+# function install {
+#   cmd=$1
+#   shift
+#   for pkg in $@;
+#   do
+#     exec="$cmd $pkg"
+#     prompt "Execute: $exec"
+#     if ${exec} ; then
+#       echo "Installed $pkg"
+#     else
+#       echo "Failed to execute: $exec"
+#     fi
+#   done
+# }
 
 # prompt "Update ruby"
 # ruby -v
@@ -335,8 +334,8 @@ cd; curl -#L https://github.com/barryclark/bashstrap/tarball/master | tar -xzv -
 
 prompt "Set git defaults"
 for config in "${git_configs[@]}"
-do
-  git config --global ${config}
+  do
+    git config --global ${config}
 done
 gpg --keyserver hkp://pgp.mit.edu --recv ${gpg_key}
 
