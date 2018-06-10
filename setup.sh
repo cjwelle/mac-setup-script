@@ -93,7 +93,6 @@ casks=(
   iterm2
   java
   jetbrains-toolbox
-  kap-beta
   keka
   launchrocket
   licecap
