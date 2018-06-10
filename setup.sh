@@ -69,7 +69,6 @@ casks=(
   atom
   authy
   basecamp
-  betterzipql
   cakebrew
   cleanmymac
   commander-one
