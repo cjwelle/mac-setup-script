@@ -84,6 +84,7 @@ casks=(
   google-backup-and-sync
   google-chrome
   hobo
+  ihosts
   hostbuddy
   hyper
   iina
@@ -127,6 +128,7 @@ casks=(
   sqlite
   steam
   superduper
+  switchhosts
   sync
   teleport
   transmission
