@@ -28,5 +28,8 @@ main() {
       brew upgrade
     fi
     brew doctor
-    
+
     git clone https://github.com/cjwelle/mac-setup-script.git --depth 1 && cd mac-setup-script && sh ./setup.sh
+  }
+
+  main
