@@ -329,7 +329,7 @@ cd; curl -#L https://github.com/barryclark/bashstrap/tarball/master | tar -xzv -
 #source ~/.bash_profile
 
 prompt "Set git defaults"
-for config in ${git_configs[@]}; do
+for config in "${git_configs[@]}"; do
   git config --global ${config}
 done
 gpg --keyserver hkp://pgp.mit.edu --recv ${gpg_key}
