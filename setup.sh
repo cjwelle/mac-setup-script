@@ -319,14 +319,15 @@ brew tap caskroom/fonts
 install brew cask install ${fonts[@]}
 install apm install ${apm[@]}
 
-prompt "Upgrade bash"
-brew install bash
-sudo bash -c "echo $(brew --prefix)/bin/bash >> /private/etc/shells"
-mv ~/.bash_profile ~/.bash_profile_backup
-mv ~/.bashrc ~/.bashrc_backup
-mv ~/.gitconfig ~/.gitconfig_backup
-cd; curl -#L https://github.com/barryclark/bashstrap/tarball/master | tar -xzv --strip-components 1 --exclude={README.md,screenshot.png}
-#source ~/.bash_profile
+### TODO: Redo the bash/fish prompt variable.
+# prompt "Upgrade bash"
+# brew install bash
+# sudo bash -c "echo $(brew --prefix)/bin/bash >> /private/etc/shells"
+# mv ~/.bash_profile ~/.bash_profile_backup
+# mv ~/.bashrc ~/.bashrc_backup
+# mv ~/.gitconfig ~/.gitconfig_backup
+# cd; curl -#L https://github.com/barryclark/bashstrap/tarball/master | tar -xzv --strip-components 1 --exclude={README.md,screenshot.png}
+# source ~/.bash_profile
 
 prompt "Set git defaults"
 for config in "${git_configs[@]}"; do
@@ -334,8 +335,9 @@ for config in "${git_configs[@]}"; do
 done
 gpg --keyserver hkp://pgp.mit.edu --recv ${gpg_key}
 
-prompt "Install mac CLI [NOTE: Say NO to bash-completions since we have fzf]!"
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/guarinogabriel/mac-cli/master/mac-cli/tools/install)"
+### TODO: Come back and review Mac CLI install.
+# prompt "Install mac CLI [NOTE: Say NO to bash-completions since we have fzf]!"
+# sh -c "$(curl -fsSL https://raw.githubusercontent.com/guarinogabriel/mac-cli/master/mac-cli/tools/install)"
 
 prompt "Update packages"
 pip3 install --upgrade pip setuptools wheel
