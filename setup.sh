@@ -274,20 +274,20 @@ function prompt {
 # fi
 # brew doctor
 
-# function install {
-#   cmd=$1
-#   shift
-#   for pkg in $@;
-#   do
-#     exec="$cmd $pkg"
-#     prompt "Execute: $exec"
-#     if ${exec} ; then
-#       echo "Installed $pkg"
-#     else
-#       echo "Failed to execute: $exec"
-#     fi
-#   done
-# }
+function install {
+  cmd=$1
+  shift
+  for pkg in $@;
+  do
+    exec="$cmd $pkg"
+    prompt "Execute: $exec"
+    if ${exec} ; then
+      echo "Installed $pkg"
+    else
+      echo "Failed to execute: $exec"
+    fi
+  done
+}
 
 # prompt "Update ruby"
 # ruby -v
@@ -305,19 +305,19 @@ brew cask install java
 
 prompt "Install packages"
 brew info ${brews[@]}
-brew install ${brews[@]}
+install brew install ${brews[@]}
 
 prompt "Install software"
 brew tap caskroom/versions
 brew cask info ${casks[@]}
-brew cask install ${casks[@]}
-pip install --upgrade ${pips[@]}
-gem install ${gems[@]}
-npm install --global ${npms[@]}
-code --install-extension ${vscode[@]}
+install brew cask install ${casks[@]}
+install pip install --upgrade ${pips[@]}
+install gem install ${gems[@]}
+install npm install --global ${npms[@]}
+install code --install-extension ${vscode[@]}
 brew tap caskroom/fonts
-brew cask install ${fonts[@]}
-apm install ${apm[@]}
+install brew cask install ${fonts[@]}
+install apm install ${apm[@]}
 
 prompt "Upgrade bash"
 brew install bash
