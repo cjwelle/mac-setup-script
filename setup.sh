@@ -261,18 +261,18 @@ function prompt {
   read -p "Setting up $1 ..."
 }
 
-if test ! $(which brew); then
-  prompt "Install Xcode"
-  xcode-select --install
-
-  prompt "Install Homebrew"
-  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-else
-  prompt "Update Homebrew"
-  brew update
-  brew upgrade
-fi
-brew doctor
+# if test ! $(which brew); then
+#   prompt "Install Xcode"
+#   xcode-select --install
+#
+#   prompt "Install Homebrew"
+#   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+# else
+#   prompt "Update Homebrew"
+#   brew update
+#   brew upgrade
+# fi
+# brew doctor
 
 # function install {
 #   cmd=$1
