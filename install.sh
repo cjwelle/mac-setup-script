@@ -11,22 +11,19 @@ NC='\033[0m' # No Color
 PACKAGE_DIRECTORY="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 main() {
-    function prompt {
-      read "Installing $1 ..."
-    }
 
     echo "${LIGHTBLUE}================================================"
     echo " CJWelle Mac Installer"
     echo "================================================${NC}\n"
 
     if test ! $(which brew); then
-      prompt "Install Xcode"
+      echo "Install Xcode"
       xcode-select --install
 
-      prompt "Install Homebrew"
+      echo "Install Homebrew"
       ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
     else
-      prompt "Update Homebrew"
+      echo "Update Homebrew"
       brew update
       brew upgrade
     fi

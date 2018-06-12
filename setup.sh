@@ -251,24 +251,21 @@ set +e
 set -x
 
 function password {
-  prompt "Please enter in your password."
+  echo "Please enter in your password."
   echo -n Password:
   read -s password
   echo
 }
 
-function prompt {
-  read "Installing $1 ..."
-}
 
 # if test ! $(which brew); then
-#   prompt "Install Xcode"
+#   echo "Install Xcode"
 #   xcode-select --install
 #
-#   prompt "Install Homebrew"
+#   echo "Install Homebrew"
 #   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 # else
-#   prompt "Update Homebrew"
+#   echo "Update Homebrew"
 #   brew update
 #   brew upgrade
 # fi
@@ -280,7 +277,7 @@ function install {
   for pkg in $@;
   do
     exec="$cmd $pkg"
-    prompt "Execute: $exec"
+    echo "Execute: $exec"
     if ${exec} ; then
       echo "Installed $pkg"
     else
@@ -289,7 +286,7 @@ function install {
   done
 }
 
-# prompt "Update ruby"
+# echo "Update ruby"
 # ruby -v
 # brew install gpg
 # gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
@@ -300,14 +297,14 @@ function install {
 # ruby -v
 # sudo gem update --system
 
-prompt "Install Java"
+echo "Install Java"
 brew cask install java
 
-prompt "Install packages"
+echo "Install packages"
 brew info ${brews[@]}
 install 'brew install' ${brews[@]}
 
-prompt "Install software"
+echo "Install software"
 brew tap caskroom/versions
 brew cask info ${casks[@]}
 install 'brew cask install' ${casks[@]}
@@ -319,8 +316,8 @@ brew tap caskroom/fonts
 install 'brew cask install' ${fonts[@]}
 install 'apm install' ${apm[@]}
 
-### TODO: Redo the bash/fish prompt variable.
-# prompt "Upgrade bash"
+### TODO: Redo the bash/fish echo variable.
+# echo "Upgrade bash"
 # brew install bash
 # sudo bash -c "echo $(brew --prefix)/bin/bash >> /private/etc/shells"
 # mv ~/.bash_profile ~/.bash_profile_backup
@@ -329,21 +326,21 @@ install 'apm install' ${apm[@]}
 # cd; curl -#L https://github.com/barryclark/bashstrap/tarball/master | tar -xzv --strip-components 1 --exclude={README.md,screenshot.png}
 # source ~/.bash_profile
 
-prompt "Set git defaults"
+echo "Set git defaults"
 for config in "${git_configs[@]}"; do
   git config --global ${config}
 done
 gpg --keyserver hkp://pgp.mit.edu --recv ${gpg_key}
 
 ### TODO: Come back and review Mac CLI install.
-# prompt "Install mac CLI [NOTE: Say NO to bash-completions since we have fzf]!"
+# echo "Install mac CLI [NOTE: Say NO to bash-completions since we have fzf]!"
 # sh -c "$(curl -fsSL https://raw.githubusercontent.com/guarinogabriel/mac-cli/master/mac-cli/tools/install)"
 
-prompt "Update packages"
+echo "Update packages"
 pip3 install --upgrade pip setuptools wheel
 mac update
 
-prompt "Cleanup"
+echo "Cleanup"
 brew cleanup
 brew cask cleanup
 
