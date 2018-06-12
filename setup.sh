@@ -258,7 +258,7 @@ function password {
 }
 
 function prompt {
-  read -p "Setting up $1 ..."
+  read -p "Installing $1 ..."
 }
 
 # if test ! $(which brew); then
@@ -305,19 +305,19 @@ brew cask install java
 
 prompt "Install packages"
 brew info ${brews[@]}
-install brew install ${brews[@]}
+install 'brew install' ${brews[@]}
 
 prompt "Install software"
 brew tap caskroom/versions
 brew cask info ${casks[@]}
-install brew cask install ${casks[@]}
-install pip install --upgrade ${pips[@]}
-install gem install ${gems[@]}
-install npm install --global ${npms[@]}
-install code --install-extension ${vscode[@]}
+install 'brew cask install' ${casks[@]}
+install 'pip install' --upgrade ${pips[@]}
+install 'gem install' ${gems[@]}
+install 'npm install --global' ${npms[@]}
+install 'code --install-extension' ${vscode[@]}
 brew tap caskroom/fonts
-install brew cask install ${fonts[@]}
-install apm install ${apm[@]}
+install 'brew cask install' ${fonts[@]}
+install 'apm install' ${apm[@]}
 
 ### TODO: Redo the bash/fish prompt variable.
 # prompt "Upgrade bash"
