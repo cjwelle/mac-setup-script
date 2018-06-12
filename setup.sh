@@ -258,7 +258,7 @@ function password {
 }
 
 function prompt {
-  read -p "Installing $1 ..."
+  read "Installing $1 ..."
 }
 
 # if test ! $(which brew); then

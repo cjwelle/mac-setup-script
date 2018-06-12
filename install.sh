@@ -12,7 +12,7 @@ PACKAGE_DIRECTORY="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 main() {
     function prompt {
-      read -p "Installing $1 ..."
+      read "Installing $1 ..."
     }
 
     echo "${LIGHTBLUE}================================================"
@@ -33,6 +33,8 @@ main() {
     brew doctor
 
     git clone https://github.com/cjwelle/mac-setup-script.git --depth 1 && cd mac-setup-script && sh ./setup.sh
+
+    rm -rf ./mac-setup-script
   }
 
   main
