@@ -11,10 +11,10 @@ NC='\033[0m' # No Color
 PACKAGE_DIRECTORY="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 main() {
-  function prompt {
-    read -p "Setting up $1 ..."
-  }
-  
+    function prompt {
+      read -p "Setting up $1 ..."
+    }
+    
     echo "${LIGHTBLUE}================================================"
     echo " CJWelle Mac Installer"
     echo "================================================${NC}\n"
