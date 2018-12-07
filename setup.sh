@@ -21,7 +21,6 @@ brews=(
   git-lfs
   gnuplot
   go
-  haskell-stack
   hh
   htop
   httpie
@@ -32,7 +31,6 @@ brews=(
   lighttpd
   lnav
   mackup
-  macvim
   mas
   micro
   moreutils
@@ -71,64 +69,34 @@ casks=(
   authy
   basecamp
   cakebrew
-  cleanmymac
-  commander-one
   divvy
-  docker
   dropbox
   epic
   filezilla
   firefox
-  geekbench
   gimp
   github
   google-backup-and-sync
   google-chrome
-  hobo
   hostbuddy
-  hyper
-  ihosts
-  iina
-  istat-menus
-  istat-server
   iterm2
   java
-  jetbrains-toolbox
   keka
-  launchrocket
-  licecap
   macdown
   microsoft-office
   mindjet-mindmanager
-  minikube
   monity-helper
-  muzzle
   osxfuse
   pandora
-  private-eye
-  qlcolorcode
-  qlmarkdown
-  qlstephen
-  quicklook-csv
-  quicklook-json
   resilio-sync
   royal-tsx
-  satellite-eyes
-  screens
-  screens-connect
   serial
-  sidekick
   skype
   slack
-  sling
-  snagit
-  sourcetree
   spotify
   steam
   superduper
-  switchhosts
   sync
-  transmission
   transmission-remote-gui
   transmit
   unetbootin
@@ -141,9 +109,6 @@ casks=(
   visual-studio-code
   vlc
   vmware-fusion
-  webstorm
-  xbench
-  xquartz
   zoomus
 )
 
