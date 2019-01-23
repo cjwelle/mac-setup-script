@@ -4,6 +4,7 @@ brews=(
   ansible
   archey
   aws-shell
+  fullscreen/tap/aws-rotate-key
   awscli
   bash-completion
   bash-snippets
