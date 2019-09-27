@@ -1,36 +1,81 @@
 #!/usr/bin/env bash
 
 brews=(
+  afflib
   ansible
   archey
+  augeas
+  autoconf
+  automake
+  aws-rotate-key
   aws-shell
-  fullscreen/tap/aws-rotate-key
   awscli
   bash-completion
   bash-snippets
+  boost
+  cairo
   cheat
   coreutils
   dfc
+  docker
   findutils
   fish
   fontconfig
   fpp
+  freetype
+  fribidi
   fzf
+  gd
+  gdbm
+  gettext
+  gflags
   git
   git-extras
   git-fresh
   git-lfs
+  glib
+  glog
   gnuplot
   go
-  hh
+  graphite2
+  harfbuzz
+  hstr
   htop
   httpie
+  icu4c
   iftop
+  ilmbase
   imagemagick
+  jansson
+  jpeg
   jq
   kubernetes-cli
+  libarchive
+  libcerf
+  libde265
+  libevent
+  libewf
+  libffi
+  libheif
+  libidn2
+  libmagic
+  libomp
+  libpng
+  libpq
+  librdkafka
+  libtiff
+  libtool
+  libunistring
+  libyaml
   lighttpd
+  little-cms2
+  lldpd
   lnav
+  lua
+  lynx
+  lz4
+  lzlib
+  lzo
   mackup
   mas
   micro
@@ -38,26 +83,60 @@ brews=(
   mosh
   mtr
   ncdu
+  ncurses
   nmap
   node
+  nspr
+  nss
+  oniguruma
+  openexr
+  openjpeg
+  openldap
+  openssl
+  openssl@1.1
   osquery
+  pango
+  pcre
+  pcre2
+  perl
   pgcli
+  pixman
   poppler
   postgresql
+  postgresql@10
+  protobuf
   pv
   python
-  python3
+  python@2
+  qt
+  rapidjson
+  readline
+  rocksdb
+  ruby
+  saml2aws
+  shared-mime-info
   shellcheck
+  sleuthkit
+  snappy
+  sqlite
+  ssdeep
   stormssh
+  telnet
   thefuck
+  thrift
   tmux
   trash
   tree
   vagrant-completion
   vim
+  webp
   wget
-  yarn
+  x265
   xz
+  yara
+  yarn
+  yubico-piv-tool
+  zstd
 )
 
 casks=(
@@ -65,16 +144,19 @@ casks=(
   adobe-air
   aerial
   angry-ip-scanner
+  arq
   atlauncher
   atom
   authy
-  basecamp
+  bartender
+  butt
   cakebrew
   divvy
   dropbox
+  duet
   epic
-  filezilla
   firefox
+  font-source-code-pro
   gimp
   github
   google-backup-and-sync
@@ -82,30 +164,28 @@ casks=(
   hostbuddy
   iterm2
   java
-  keka
   macdown
   microsoft-office
   mindjet-mindmanager
   monity-helper
+  muzzle
+  nightowl
+  numi
   osxfuse
-  pandora
   resilio-sync
-  royal-tsx
-  serial
   skype
-  slack
   spotify
   steam
   superduper
   sync
   transmission-remote-gui
   transmit
+  twitch
   unetbootin
   vagrant
   vagrant-manager
   veracrypt
   virtualbox
-  virtualbox-extension-pack
   viscosity
   visual-studio-code
   vlc
@@ -114,16 +194,48 @@ casks=(
 )
 
 pips=(
-  pip
+  ansi2html
   ansible
+  asn1crypto
+  awscli
   bcrypt
-  glances
+  botocore
+  cffi
+  cfn-flip
+  Click
+  colorama
+  cryptography
+  docutils
+  enum34
+  future
+  futures
+  Glances
+  idna
+  ipaddress
+  Jinja2
+  jmespath
+  MarkupSafe
   ohmu
+  paramiko
+  pip
   powerline-shell
+  protobuf
+  psutil
+  PyAFF
+  pyasn1
+  pycparser
+  PyNaCl
+  python-dateutil
+  python-magic
   pythonpy
   PyYAML
+  rsa
+  s3cmd
+  s3transfer
+  scandir
   setuptools
-  siz
+  six
+  urllib3
   wheel
 )
 
@@ -144,41 +256,46 @@ npms=(
 
 apm=(
   ansible-galaxy
-  ansible-snippets
-  ansible-vault@
-  asciidoc-assistant
-  asciidoc-image-helper
-  asciidoc-preview
+  ansible-vault
   atom-beautify
   atom-cform
   atom-cform-yaml
+  atom-cli-diff
+  atom-debugger
+  atom-ide-debugger-python
+  atom-ide-ui
   atom-json-color
   atom-material-syntax-dark
   atom-material-ui
+  atom-node-debugger
   atom-yamljson
   autocomplete-ansible
-  autocomplete-asciidoc
   autocomplete-modules
   autocomplete-python
   autocomplete-xml
+  busy-signal
+  debugger
+  environment
   git-plus
-  git-projects
   git-status
   git-time-machine
+  intentions
   language-ansible
-  language-asciidoc
   language-json-comments
   language-yaml-cloudformation
+  linter-js-yaml
+  linter-ui-default
   merge-conflicts
+  minimap
+  minimap-git-diff
   pretty-json
-  project-plus
-  project-viewer
   ramda-syntax
   sort-lines
+  sort-selected-elements
+  sublime-style-column-selection
+  split-diff
   sync-settings
-  synced-sidebar
   tree-view-git-branch
-  tree-view-git-status
 )
 
 gpg_key='966831710CA34AAA'
