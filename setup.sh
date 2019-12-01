@@ -14,8 +14,10 @@ brews=(
   bash-snippets
   boost
   cairo
+  cfn-lint
   cheat
   coreutils
+  cscope
   dfc
   docker
   findutils
@@ -39,6 +41,8 @@ brews=(
   go
   graphite2
   harfbuzz
+  haskell-stack
+  highlight
   hstr
   htop
   httpie
@@ -79,6 +83,7 @@ brews=(
   mackup
   mas
   micro
+  minikube
   moreutils
   mosh
   mtr
@@ -95,6 +100,7 @@ brews=(
   openssl
   openssl@1.1
   osquery
+  packer
   pango
   pcre
   pcre2
@@ -122,6 +128,7 @@ brews=(
   ssdeep
   stormssh
   telnet
+  terraform
   thefuck
   thrift
   tmux
@@ -149,6 +156,7 @@ casks=(
   atom
   authy
   bartender
+  basecamp
   butt
   cakebrew
   divvy
@@ -161,23 +169,32 @@ casks=(
   github
   google-backup-and-sync
   google-chrome
+  handbrake
   hostbuddy
   iterm2
   java
+  lastpass
   macdown
+  makemkv
   microsoft-office
   mindjet-mindmanager
+  minikube
+  mongodb
   monity-helper
   muzzle
   nightowl
   numi
   osxfuse
+  powershell
   resilio-sync
+  screens
+  screens-connect
   skype
   spotify
   steam
   superduper
   sync
+  transmission
   transmission-remote-gui
   transmit
   twitch
@@ -196,47 +213,19 @@ casks=(
 pips=(
   ansi2html
   ansible
-  asn1crypto
   awscli
   bcrypt
   botocore
-  cffi
   cfn-flip
-  Click
   colorama
-  cryptography
   docutils
-  enum34
-  future
-  futures
-  Glances
-  idna
-  ipaddress
   Jinja2
-  jmespath
   MarkupSafe
-  ohmu
-  paramiko
   pip
   powerline-shell
-  protobuf
-  psutil
-  PyAFF
-  pyasn1
-  pycparser
-  PyNaCl
-  python-dateutil
-  python-magic
-  pythonpy
   PyYAML
-  rsa
   s3cmd
-  s3transfer
-  scandir
   setuptools
-  six
-  urllib3
-  wheel
 )
 
 gems=(
@@ -267,35 +256,27 @@ apm=(
   atom-json-color
   atom-material-syntax-dark
   atom-material-ui
-  atom-node-debugger
   atom-yamljson
-  autocomplete-ansible
-  autocomplete-modules
-  autocomplete-python
-  autocomplete-xml
-  busy-signal
   debugger
-  environment
   git-plus
   git-status
   git-time-machine
-  intentions
   language-ansible
   language-json-comments
   language-yaml-cloudformation
   linter-js-yaml
-  linter-ui-default
   merge-conflicts
   minimap
   minimap-git-diff
   pretty-json
+  project-viewer
   ramda-syntax
   sort-lines
   sort-selected-elements
-  sublime-style-column-selection
   split-diff
   sync-settings
   tree-view-git-branch
+  tree-view-git-status
 )
 
 gpg_key='966831710CA34AAA'
@@ -317,12 +298,47 @@ git_configs=(
 )
 
 vscode=(
-  donjayamanne.python
+  alefragnani.project-manager
+  amazonwebservices.aws-toolkit-vscode
+  aws-amplify.aws-amplify-vscode
+  aws-scripting-guy.cform
+  bhshawon.node-json-autocomplete
+  bmalehorn.vscode-fish
+  cmstead.jsrefactor
+  DanielThielking.aws-cloudformation-yaml
+  dhoeric.ansible-vault
   dragos.scala-lsp
-  lukehoban.Go
+  dsteenman.cloudformation-yaml-snippets
+  erd0s.terraform-autocomplete
+  frhtylcn.aws-sdk-snippets
+  haaaad.ansible
+  iann0036.live-share-for-aws-cloud9
+  itayadler.terraform-ssm
+  jasonnutter.search-node-modules
+  keyboardDrummer.vscode-cloudformation
+  loganarnett.lambda-snippets
+  lunaryorn.fish-ide
+  mark-tucker.aws-cli-configure
+  miramac.vscode-exec-node
+  ms-azuretools.vscode-docker
+  ms-python.python
   ms-vscode.cpptools
-  rebornix.Ruby
+  ms-vscode.powershell
+  PlethoraOfHate.aws-actions
+  pradiphudekar.cf-templates
+  rebornix.ruby
   redhat.java
+  redhat.vscode-yaml
+  skyapps.fish-vscode
+  sysninja.vscode-ansible-mod
+  ThreadHeap.serverless-ide-vscode
+  timonwong.ansible-autocomplete
+  vscodevim.vim
+  vscoss.vscode-ansible
+  walkme.NodeJS-extension-pack
+  wingrunr21.vscode-ruby
+  wolfmah.ansible-vault-inline
+  zikalino.azure-rest-for-ansible
 )
 
 fonts=(
@@ -391,7 +407,7 @@ echo "Install software"
 brew tap caskroom/versions
 brew cask info ${casks[@]}
 install 'brew cask install' ${casks[@]}
-install 'pip install' --upgrade ${pips[@]}
+install 'pip3 install' --upgrade ${pips[@]}
 install 'gem install' ${gems[@]}
 install 'npm install --global' ${npms[@]}
 install 'code --install-extension' ${vscode[@]}
